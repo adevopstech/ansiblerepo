@@ -1,0 +1,12 @@
+---
+- name: Configure httpd.conf file and push it to the target hosts
+  copy:
+    src: httpd.conf
+    dest: /etc/httpd/conf/httpd.conf
+  notify: 
+    - restart apache
+- name: Send index.html file
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+

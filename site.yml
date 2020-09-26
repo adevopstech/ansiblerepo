@@ -1,0 +1,5 @@
+---
+- name: Core YAML file to invoke role (s)
+  hosts: web
+  roles: 
+    - apache
